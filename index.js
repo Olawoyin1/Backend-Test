@@ -3,6 +3,14 @@
 const http = require("http"); // to create the server
 const https = require("https"); // to fetch data from the given API
 
+http.createServer((req, res) => {
+  res.write("Server is live 🚀");
+  res.end();
+}).listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+
 // This will be our memory storage for the photos
 let photosData = [];
 
